@@ -14,7 +14,11 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['element-ui/lib/theme-chalk/index.css'],
+  css: [
+    'normalize.css',
+    'element-ui/lib/theme-chalk/index.css',
+    '~/styles/main.scss',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ['@/plugins/element-ui'],
@@ -40,5 +44,8 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
+    styleResources: {
+      scss: './styles/resources/*.scss',
+    },
   },
 }
